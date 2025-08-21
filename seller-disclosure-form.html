@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queensland Property Seller Disclosure Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
+
+    <!-- Progress Indicator -->
+    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
+        <h1 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">Queensland Property Seller Disclosure Form</h1>
+        <div style="display: flex; justify-content: center; margin-bottom: 10px;">
+            <div id="progress-bar" style="width: 100%; height: 8px; background-color: #e1e8ed; border-radius: 4px; overflow: hidden;">
+                <div id="progress-fill" style="height: 100%; background-color: #3498db; width: 12.5%; transition: width 0.3s ease;"></div>
+            </div>
+        </div>
+        <div style="text-align: center; color: #6c757d; font-size: 14px;">
+            Section <span id="current-section">1</span> of 8
+        </div>
+    </div>
+
+    <form id="seller-disclosure-form" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        
+        <!-- SECTION 1: Basic Property Information -->
+        <div id="section-1" class="form-section" style="display: block;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 1: Basic Property Information</h1>
+
+            <!-- Seller Details Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Seller Details</h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Who is selling this property?</p>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Primary seller name: <span style="color: #e74c3c;">*</span></label>
+                    <input type="text" id="primary_seller" name="primary_seller" required 
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                </div>
+                
+                <div id="additional-sellers">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Additional seller name:</label>
+                        <input type="text" id="additional_seller_1" name="additional_seller_1" 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                </div>
+                
+                <button type="button" id="add-seller-btn" 
+                        style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; transition: background-color 0.3s;">
+                    + Add another seller
+                </button>
+            </div>
+
+            <!-- Property Address Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Property Address</h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">What is the property address?</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 3fr; gap: 15px; margin-bottom: 15px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Street number: <span style="color: #e74c3c;">*</span></label>
+                        <input type="text" id="street_number" name="street_number" required 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Street name: <span style="color: #e74c3c;">*</span></label>
+                        <input type="text" id="street_name" name="street_name" required 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Suburb: <span style="color: #e74c3c;">*</span></label>
+                        <input type="text" id="suburb" name="suburb" required 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Postcode: <span style="color: #e74c3c;">*</span></label>
+                        <input type="text" id="postcode" name="postcode" required 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Description Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Legal Description 
+                    <button type="button" id="legal-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Property legal details</p>
+                
+                <div id="legal-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Where to find this information:</h4>
+                        <ul style="color: #34495e; margin-bottom: 10px;">
+                            <li>Check your rates notice</li>
+                            <li>Look at your title documents</li>
+                            <li>Contact your solicitor if unsure</li>
+                        </ul>
+                        <p style="color: #6c757d; font-style: italic; margin: 0;"><strong>Example:</strong> Lot 15 on Plan SP123456</p>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Lot number: <span style="color: #e74c3c;">*</span></label>
+                        <input type="text" id="lot_number" name="lot_number" required 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Plan number: <span style="color: #e74c3c;">*</span></label>
+                        <input type="text" id="plan_number" name="plan_number" required 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Scheme Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Community Scheme 
+                    <button type="button" id="community-help-toggle" 
+                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ❓
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Is your property part of a community titles scheme or BUGTA scheme?</p>
+                
+                <div id="community-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Community Titles Scheme examples:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Apartments or units in a building</li>
+                            <li>Townhouses in a complex</li>
+                            <li>Houses in a gated community</li>
+                            <li>Properties with shared facilities (pool, gym, gardens)</li>
+                            <li>Strata-titled properties</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">BUGTA Scheme examples:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Older unit complexes (pre-1997)</li>
+                            <li>Building units under old legislation</li>
+                            <li>Group title properties</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">How to tell:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Do you pay body corporate fees?</li>
+                            <li>Do you share common areas with other owners?</li>
+                            <li>Is there a body corporate committee?</li>
+                            <li>Do you receive body corporate meeting notices?</li>
+                        </ul>
+                        
+                        <p style="color: #6c757d; font-style: italic; margin: 0;"><strong>Still unsure?</strong> Check your title documents or contact your solicitor.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="community_yes" name="community_scheme" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="community_no" name="community_scheme" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No</span>
+                    </label>
+                </div>
+                
+                <!-- Conditional Notes -->
+                <div id="community-yes-note" style="display: none; background-color: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 10px; border-radius: 4px; margin-top: 10px; transition: all 0.3s ease-in-out;">
+                    You'll need body corporate documents later in this form
+                </div>
+                
+                <div id="community-no-note" style="display: none; background-color: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; padding: 10px; border-radius: 4px; margin-top: 10px; transition: all 0.3s ease-in-out;">
+                    Body corporate sections will be skipped
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: Property Documents & Agreements -->
+        <div id="section-2" class="form-section" style="display: none;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 2: Property Documents & Agreements</h1>
+
+            <!-- Required Documents Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Required Documents 
+                    <button type="button" id="documents-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Do you have these documents ready to provide to the buyer?</p>
+                
+                <div id="documents-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Why these are needed:</h4>
+                        <p style="color: #34495e; margin-bottom: 15px;">Buyers have a legal right to see these documents before signing a contract. They show what's officially registered about your property and any restrictions or rights that come with it.</p>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Where to get them:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li><strong>Title search:</strong> Order from Queensland Titles Office online or through your solicitor</li>
+                            <li><strong>Survey plan:</strong> Usually comes with title search, or from Titles Office</li>
+                        </ul>
+                        
+                        <p style="color: #6c757d; font-style: italic; margin: 0;"><strong>Cost:</strong> Around $30-50 total for both documents</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="checkbox" id="title_search" name="required_docs" value="title_search" 
+                               style="margin-right: 10px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Current title search (shows who owns the property and any registered restrictions)</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="checkbox" id="survey_plan" name="required_docs" value="survey_plan" 
+                               style="margin-right: 10px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Plan of survey (official map/diagram of your property boundaries)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Property Agreements & Restrictions Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Property Agreements & Restrictions 
+                    <button type="button" id="agreements-help-toggle" 
+                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ❓
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Are there any ongoing agreements or arrangements that will affect the new owner?</p>
+                
+                <div id="agreements-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">What we're looking for:</h4>
+                        <p style="color: #34495e; margin-bottom: 15px;">Any deals, agreements, or arrangements you've made that the new owner will need to know about or continue.</p>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Examples:</h4>
+                        <ul style="color: #34495e; margin: 0;">
+                            <li>Tenant living in the property</li>
+                            <li>Neighbor using part of your driveway</li>
+                            <li>Agreement to maintain shared fence</li>
+                            <li>Someone else's pipes/cables crossing your land</li>
+                            <li>Informal arrangements about property use</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="agreements_yes" name="has_agreements" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - there are agreements or arrangements</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="agreements_no" name="has_agreements" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no ongoing agreements</span>
+                    </label>
+                </div>
+
+                <!-- Agreement Types - Hidden by default -->
+                <div id="agreement-types" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">What type of agreements exist?</h3>
+
+                    <!-- Current Tenants -->
+                    <div style="margin-bottom: 25px; padding: 15px; background: #f1f8ff; border-left: 4px solid #007bff; border-radius: 4px;">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Current Tenants</h4>
+                        <label style="display: block; margin-bottom: 15px;">
+                            <input type="checkbox" id="has_tenant" name="agreement_types" value="tenant" 
+                                   style="margin-right: 10px; transform: scale(1.2);">
+                            <span style="font-weight: 500; color: #2c3e50;">Someone is renting/living in the property</span>
+                        </label>
+
+                        <div id="tenant-details" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 4px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Lease start date:</label>
+                                    <input type="date" id="lease_start" name="lease_start" 
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Lease end date:</label>
+                                    <input type="date" id="lease_end" name="lease_end" 
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Weekly/monthly rent: $</label>
+                                    <input type="number" id="rent_amount" name="rent_amount" step="0.01"
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Bond amount: $</label>
+                                    <input type="number" id="bond_amount" name="bond_amount" step="0.01"
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                </div>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 10px; font-weight: 600; color: #2c3e50;">Can tenant renew lease?</label>
+                                <div style="display: flex; gap: 20px;">
+                                    <label><input type="radio" name="lease_renewal" value="yes" style="margin-right: 5px;"> Yes</label>
+                                    <label><input type="radio" name="lease_renewal" value="no" style="margin-right: 5px;"> No</label>
+                                    <label><input type="radio" name="lease_renewal" value="maybe" style="margin-right: 5px;"> Maybe</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Written Agreements -->
+                    <div style="margin-bottom: 25px; padding: 15px; background: #f8fff0; border-left: 4px solid #28a745; border-radius: 4px;">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Written Agreements</h4>
+                        <label style="display: block; margin-bottom: 15px;">
+                            <input type="checkbox" id="has_written_agreements" name="agreement_types" value="written" 
+                                   style="margin-right: 10px; transform: scale(1.2);">
+                            <span style="font-weight: 500; color: #2c3e50;">Formal written agreements with neighbors or others</span>
+                        </label>
+
+                        <div id="written-agreements-details" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 4px;">
+                            <div style="margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload agreement documents:</label>
+                                <input type="file" id="agreement_upload" name="agreement_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Brief description:</label>
+                                <textarea id="written_description" name="written_description" rows="3"
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verbal Agreements -->
+                    <div style="margin-bottom: 25px; padding: 15px; background: #fff8e1; border-left: 4px solid #ffc107; border-radius: 4px;">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">
+                            Verbal/Handshake Agreements 
+                            <button type="button" id="verbal-help-toggle" 
+                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
+                                ℹ️
+                            </button>
+                        </h4>
+                        
+                        <div id="verbal-help-panel" style="display: none; margin-bottom: 15px;">
+                            <div style="padding: 10px; border: 1px solid #e1e8ed; border-radius: 6px; background: #f9f9f9; font-size: 13px;">
+                                <p style="color: #34495e; margin-bottom: 10px;">Even informal "handshake deals" can be legally binding. Examples:</p>
+                                <ul style="color: #34495e; margin: 0;">
+                                    <li>"You can park in my driveway"</li>
+                                    <li>"I'll maintain the shared garden bed"</li>
+                                    <li>"You can access your shed through my property"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <label style="display: block; margin-bottom: 15px;">
+                            <input type="checkbox" id="has_verbal_agreements" name="agreement_types" value="verbal" 
+                                   style="margin-right: 10px; transform: scale(1.2);">
+                            <span style="font-weight: 500; color: #2c3e50;">Informal verbal agreements about property use</span>
+                        </label>
+
+                        <div id="verbal-agreements-details" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 4px;">
+                            <div style="margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Who is the agreement with:</label>
+                                <input type="text" id="verbal_with" name="verbal_with" 
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">What was agreed:</label>
+                                <textarea id="verbal_agreement" name="verbal_agreement" rows="3"
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">How long has this been happening:</label>
+                                <input type="text" id="verbal_duration" name="verbal_duration" 
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Government/Utility Rights -->
+                    <div style="margin-bottom: 25px; padding: 15px; background: #f3e5f5; border-left: 4px solid #9c27b0; border-radius: 4px;">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">
+                            Government/Utility Rights 
+                            <button type="button" id="utility-help-toggle" 
+                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
+                                ℹ️
+                            </button>
+                        </h4>
+                        
+                        <div id="utility-help-panel" style="display: none; margin-bottom: 15px;">
+                            <div style="padding: 10px; border: 1px solid #e1e8ed; border-radius: 6px; background: #f9f9f9; font-size: 13px;">
+                                <p style="color: #34495e; margin-bottom: 10px;"><strong>Common examples:</strong></p>
+                                <ul style="color: #34495e; margin-bottom: 10px;">
+                                    <li>Power lines crossing your property</li>
+                                    <li>Water/sewer pipes under your land</li>
+                                    <li>Council drainage easements</li>
+                                    <li>NBN/telecommunications equipment</li>
+                                </ul>
+                                <p style="color: #6c757d; font-style: italic; margin: 0;"><strong>Check for:</strong> Easements listed on your title search or council notices you've received</p>
+                            </div>
+                        </div>
+
+                        <label style="display: block; margin-bottom: 15px;">
+                            <input type="checkbox" id="has_utility_rights" name="agreement_types" value="utility" 
+                                   style="margin-right: 10px; transform: scale(1.2);">
+                            <span style="font-weight: 500; color: #2c3e50;">Government or utilities have rights over my property</span>
+                        </label>
+
+                        <div id="utility-rights-details" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 4px;">
+                            <div style="margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of what crosses/affects your property:</label>
+                                <textarea id="utility_description" name="utility_description" rows="3"
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload any documents/plans:</label>
+                                <input type="file" id="utility_upload" name="utility_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rental History Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Rental History 
+                    <button type="button" id="rental-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Has this property been rented out in the last 12 months?</p>
+                
+                <div id="rental-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Why this matters:</h4>
+                        <p style="color: #34495e; margin: 0;">Queensland law says rent can only be increased once every 12 months. If you recently increased rent, the new owner can't increase it again until the 12 months is up.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="rental_yes" name="has_rental_history" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - property has been rented</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="rental_no" name="has_rental_history" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - not rented in last 12 months</span>
+                    </label>
+                </div>
+
+                <div id="rental-details" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">When was rent last increased:</label>
+                        <input type="date" id="rent_increase_date" name="rent_increase_date" 
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 10px; font-weight: 600; color: #2c3e50;">Do you have evidence of this date?</label>
+                        <div style="display: flex; gap: 20px;">
+                            <label><input type="radio" name="has_evidence" value="yes" style="margin-right: 5px;"> Yes</label>
+                            <label><input type="radio" name="has_evidence" value="no" style="margin-right: 5px;"> No</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload rent increase notice (optional):</label>
+                        <input type="file" id="rent_notice_upload" name="rent_notice_upload" accept=".pdf,.doc,.docx,.jpg,.png"
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTIONS 3-8 Placeholders -->
+        <div id="section-3" class="form-section" style="display: none;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 3: Coming Soon</h1>
+            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 3 content will be added here...</p>
+        </div>
+
+        <div id="section-4" class="form-section" style="display: none;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 4: Coming Soon</h1>
+            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 4 content will be added here...</p>
+        </div>
+
+        <div id="section-5" class="form-section" style="display: none;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 5: Coming Soon</h1>
+            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 5 content will be added here...</p>
+        </div>
+
+        <div id="section-6" class="form-section" style="display: none;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 6: Coming Soon</h1>
+            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 6 content will be added here...</p>
+        </div>
+
+        <div id="section-7" class="form-section" style="display: none;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 7: Coming Soon</h1>
+            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 7 content will be added here...</p>
+        </div>
+
+        <div id="section-8" class="form-section" style="display: none;">
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 8: Coming Soon</h1>
+            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 8 content will be added here...</p>
+        </div>
+
+        <!-- Form Navigation -->
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #e1e8ed; display: flex; justify-content: space-between; align-items: center;">
+            <button type="button" id="prev-btn" style="display: none; background-color: #6c757d; color: white; border: none; padding: 12px 30px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: 600; transition: background-color 0.3s;">
+                ← Previous
+            </button>
+            <div style="flex: 1;"></div>
+            <button type="button" id="next-btn" 
+                    style="background-color: #27ae60; color: white; border: none; padding: 12px 30px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: 600; transition: background-color 0.3s;">
+                Next →
+            </button>
+            <button type="submit" id="submit-btn" style="display: none; background-color: #e74c3c; color: white; border: none; padding: 12px 30px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: 600; transition: background-color 0.3s;">
+                Submit Form
+            </button>
+        </div>
+    </form>
+
+    <script>
+        // Current section tracking
+        let currentSection = 1;
+        const totalSections = 8;
+
+        // Help toggle functionality
+        function setupHelpToggle(buttonId, panelId, activeColor, inactiveColor) {
+            const button = document.getElementById(buttonId);
+            const panel = document.getElementById(panelId);
+            if (!button || !panel) return;
+            
+            button.addEventListener('click', function() {
+                if (panel.style.display === 'none' || panel.style.display === '') {
+                    panel.style.display = 'block';
+                    this.style.backgroundColor = activeColor;
+                } else {
+                    panel.style.display = 'none';
+                    this.style.backgroundColor = inactiveColor;
+                }
+            });
+
+            button.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = activeColor;
+                this.style.transform = 'translateY(-1px)';
+                this.style.boxShadow = '0 2px 6px rgba(0,0,0,0.15)';
+            });
+
+            button.addEventListener('mouseleave', function() {
+                if (panel.style.display === 'none' || panel.style.display === '') {
+                    this.style.backgroundColor = inactiveColor;
+                }
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        }
+
+        // Section navigation
+        function showSection(sectionNum) {
+            // Hide all sections
+            for (let i = 1; i <= totalSections; i++) {
+                document.getElementById(`section-${i}`).style.display = 'none';
+            }
+            
+            // Show current section
+            document.getElementById(`section-${sectionNum}`).style.display = 'block';
+            
+            // Update progress bar
+            const progressPercent = (sectionNum / totalSections) * 100;
+            document.getElementById('progress-fill').style.width = progressPercent + '%';
+            document.getElementById('current-section').textContent = sectionNum;
+            
+            // Update navigation buttons
+            document.getElementById('prev-btn').style.display = sectionNum === 1 ? 'none' : 'block';
+            document.getElementById('next-btn').style.display = sectionNum === totalSections ? 'none' : 'block';
+            document.getElementById('submit-btn').style.display = sectionNum === totalSections ? 'block' : 'none';
+            
+            currentSection = sectionNum;
+        }
+
+        // Initialize form
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection(1);
+
+            // Setup all help toggles
+            setupHelpToggle('legal-help-toggle', 'legal-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('community-help-toggle', 'community-help-panel', '#495057', '#6c757d');
+            setupHelpToggle('documents-help-toggle', 'documents-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('agreements-help-toggle', 'agreements-help-panel', '#495057', '#6c757d');
+            setupHelpToggle('verbal-help-toggle', 'verbal-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('utility-help-toggle', 'utility-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('rental-help-toggle', 'rental-help-panel', '#138496', '#17a2b8');
+
+            // Section 1 functionality
+            let sellerCount = 1;
+            document.getElementById('add-seller-btn').addEventListener('click', function() {
+                sellerCount++;
+                const additionalSellers = document.getElementById('additional-sellers');
+                const newSellerDiv = document.createElement('div');
+                newSellerDiv.style.marginBottom = '15px';
+                newSellerDiv.innerHTML = `
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Additional seller name:</label>
+                    <input type="text" id="additional_seller_${sellerCount}" name="additional_seller_${sellerCount}" 
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                `;
+                additionalSellers.appendChild(newSellerDiv);
+            });
+
+            // Community scheme conditional notes
+            document.getElementById('community_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('community-yes-note').style.display = 'block';
+                    document.getElementById('community-no-note').style.display = 'none';
+                }
+            });
+
+            document.getElementById('community_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('community-no-note').style.display = 'block';
+                    document.getElementById('community-yes-note').style.display = 'none';
+                }
+            });
+
+            // Section 2 functionality
+            document.getElementById('agreements_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('agreement-types').style.display = 'block';
+                }
+            });
+
+            document.getElementById('agreements_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('agreement-types').style.display = 'none';
+                }
+            });
+
+            document.getElementById('has_tenant').addEventListener('change', function() {
+                document.getElementById('tenant-details').style.display = this.checked ? 'block' : 'none';
+            });
+
+            document.getElementById('has_written_agreements').addEventListener('change', function() {
+                document.getElementById('written-agreements-details').style.display = this.checked ? 'block' : 'none';
+            });
+
+            document.getElementById('has_verbal_agreements').addEventListener('change', function() {
+                document.getElementById('verbal-agreements-details').style.display = this.checked ? 'block' : 'none';
+            });
+
+            document.getElementById('has_utility_rights').addEventListener('change', function() {
+                document.getElementById('utility-rights-details').style.display = this.checked ? 'block' : 'none';
+            });
+
+            document.getElementById('rental_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('rental-details').style.display = 'block';
+                }
+            });
+
+            document.getElementById('rental_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('rental-details').style.display = 'none';
+                }
+            });
+
+            // Navigation buttons
+            document.getElementById('next-btn').addEventListener('click', function() {
+                if (currentSection < totalSections) {
+                    showSection(currentSection + 1);
+                }
+            });
+
+            document.getElementById('prev-btn').addEventListener('click', function() {
+                if (currentSection > 1) {
+                    showSection(currentSection - 1);
+                }
+            });
+
+            // Button hover effects
+            document.getElementById('add-seller-btn').addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#2980b9';
+            });
+            document.getElementById('add-seller-btn').addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#3498db';
+            });
+
+            document.getElementById('next-btn').addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#229954';
+            });
+            document.getElementById('next-btn').addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#27ae60';
+            });
+
+            document.getElementById('prev-btn').addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#5a6268';
+            });
+            document.getElementById('prev-btn').addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#6c757d';
+            });
+
+            document.getElementById('submit-btn').addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#c0392b';
+            });
+            document.getElementById('submit-btn').addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#e74c3c';
+            });
+        });
+    </script>
+
+</body>
+</html>
