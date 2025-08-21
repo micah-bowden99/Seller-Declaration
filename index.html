@@ -485,15 +485,787 @@
             </div>
         </div>
 
-        <!-- SECTIONS 3-8 Placeholders -->
+        <!-- SECTION 3: Planning, Environment & Land Use -->
         <div id="section-3" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 3: Coming Soon</h1>
-            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 3 content will be added here...</p>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 3: Planning, Environment & Land Use</h1>
+
+            <!-- Property Zoning Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Property Zoning 
+                    <button type="button" id="zoning-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Do you know what your property is zoned for?</p>
+                
+                <div id="zoning-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">What is zoning?</h4>
+                        <p style="color: #34495e; margin-bottom: 15px;">Zoning determines what you can legally do with your property - like run a business, build extensions, or use it for short-term rentals (Airbnb).</p>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Common zoning types:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Residential (houses, units)</li>
+                            <li>Commercial (shops, offices)</li>
+                            <li>Industrial (factories, warehouses)</li>
+                            <li>Mixed Use (combination)</li>
+                            <li>Rural (farming, large blocks)</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Where to find it:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Council rates notice</li>
+                            <li>Council website property search</li>
+                            <li>Planning certificate from council</li>
+                            <li>Ask your solicitor</li>
+                        </ul>
+                        
+                        <p style="color: #6c757d; font-style: italic; margin: 0;"><strong>Examples:</strong> Low Density Residential, Neighbourhood Centre, General Industrial</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="zoning_yes" name="knows_zoning" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - I know the zoning</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="zoning_no" name="knows_zoning" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - I don't know the zoning</span>
+                    </label>
+                </div>
+
+                <div id="zoning-details" style="display: none; margin-top: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Property zoning:</label>
+                    <input type="text" id="property_zoning" name="property_zoning" 
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                </div>
+            </div>
+
+            <!-- Government Transport & Infrastructure Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Government Transport & Infrastructure 
+                    <button type="button" id="transport-help-toggle" 
+                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ❓
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Has the government contacted you about transport projects affecting your property?</p>
+                
+                <div id="transport-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">What we're looking for:</h4>
+                        <p style="color: #34495e; margin-bottom: 15px;">Any official notices about roads, railways, or other transport infrastructure that could affect your property.</p>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Examples:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Road widening projects</li>
+                            <li>New railway lines</li>
+                            <li>Bus stops or transport hubs</li>
+                            <li>Cycle paths or walkways</li>
+                            <li>Airport expansion</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Types of notices:</h4>
+                        <ul style="color: #34495e; margin: 0;">
+                            <li>Letters from Main Roads Queensland</li>
+                            <li>Council correspondence about road projects</li>
+                            <li>State government infrastructure notices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Transport Infrastructure Projects</h3>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="transport_yes" name="transport_projects" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - received notices about transport projects</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 20px;">
+                        <input type="radio" id="transport_no" name="transport_projects" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no transport project notices</span>
+                    </label>
+                    
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Property Resumption (Government Taking Land)</h3>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="resumption_yes" name="property_resumption" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - received resumption notices</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="resumption_no" name="property_resumption" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no resumption notices</span>
+                    </label>
+                </div>
+
+                <div id="transport-details" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload copies of notices: <span style="color: #e74c3c;">*</span></label>
+                        <input type="file" id="transport_upload" name="transport_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Brief description:</label>
+                        <textarea id="transport_description" name="transport_description" rows="3"
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environmental Issues Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Environmental Issues 
+                    <button type="button" id="environmental-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Are there any environmental concerns with your property?</p>
+                
+                <div id="environmental-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">What this covers:</h4>
+                        <p style="color: #34495e; margin-bottom: 15px;">Any contamination, pollution, or environmental restrictions that affect your property.</p>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Common examples:</h4>
+                        <ul style="color: #34495e; margin: 0;">
+                            <li>Former petrol station sites</li>
+                            <li>Old industrial land</li>
+                            <li>Areas near mines or chemical plants</li>
+                            <li>Land with soil contamination</li>
+                            <li>Properties with environmental cleanup requirements</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Environmental Registers</h3>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="env_listed" name="environmental_registers" value="listed" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">My property is listed on environmental contamination registers</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="env_not_listed" name="environmental_registers" value="not_listed" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">My property is NOT on contamination registers</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 20px;">
+                        <input type="radio" id="env_unknown" name="environmental_registers" value="unknown" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">I don't know</span>
+                    </label>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">
+                        Environmental Notices 
+                        <button type="button" id="env-notices-help-toggle" 
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
+                            ℹ️
+                        </button>
+                    </h3>
+                    <p style="margin-bottom: 10px; color: #34495e;">Have you received any government notices about:</p>
+                    
+                    <div id="env-notices-help-panel" style="display: none; margin-bottom: 15px;">
+                        <div style="padding: 10px; border: 1px solid #e1e8ed; border-radius: 6px; background: #f9f9f9; font-size: 13px;">
+                            <p style="color: #34495e; margin: 0;">These are serious legal notices that require action. If you've received any environmental notices from government agencies, you must disclose them.</p>
+                        </div>
+                    </div>
+
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="checkbox" name="environmental_notices" value="contamination" 
+                               style="margin-right: 10px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Land contamination or cleanup requirements</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="checkbox" name="environmental_notices" value="enforcement" 
+                               style="margin-right: 10px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Environmental enforcement orders</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="checkbox" name="environmental_notices" value="investigation" 
+                               style="margin-right: 10px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Environmental investigation requirements</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="checkbox" id="no_env_notices" name="environmental_notices" value="none" 
+                               style="margin-right: 10px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No environmental notices received</span>
+                    </label>
+                </div>
+
+                <div id="environmental-details" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload copies of notices: <span style="color: #e74c3c;">*</span></label>
+                        <input type="file" id="env_upload" name="env_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of issues:</label>
+                        <textarea id="env_description" name="env_description" rows="3"
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trees & Vegetation Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Trees & Vegetation 
+                    <button type="button" id="trees-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Are there any tree disputes or vegetation restrictions?</p>
+                
+                <div id="trees-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Tree disputes include:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Neighbor complaints about your trees</li>
+                            <li>Council orders about tree removal</li>
+                            <li>Legal disputes over boundary trees</li>
+                            <li>Applications to cut down protected trees</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Protected vegetation:</h4>
+                        <ul style="color: #34495e; margin: 0;">
+                            <li>Heritage-listed trees</li>
+                            <li>Native vegetation clearing restrictions</li>
+                            <li>Koala habitat areas</li>
+                            <li>Environmentally sensitive areas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Tree Disputes</h3>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="tree_disputes_yes" name="tree_disputes" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - there are active tree disputes or orders</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 20px;">
+                        <input type="radio" id="tree_disputes_no" name="tree_disputes" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no tree issues</span>
+                    </label>
+                    
+                    <div id="tree-disputes-details" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload tree orders/applications: <span style="color: #e74c3c;">*</span></label>
+                            <input type="file" id="tree_upload" name="tree_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of tree issues:</label>
+                            <textarea id="tree_description" name="tree_description" rows="3"
+                                      style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">
+                        Protected Vegetation 
+                        <button type="button" id="vegetation-help-toggle" 
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
+                            ℹ️
+                        </button>
+                    </h3>
+                    
+                    <div id="vegetation-help-panel" style="display: none; margin-bottom: 15px;">
+                        <div style="padding: 10px; border: 1px solid #e1e8ed; border-radius: 6px; background: #f9f9f9; font-size: 13px;">
+                            <p style="color: #34495e; margin: 0;"><strong>Check with:</strong> Your local council or Department of Environment and Science if you're unsure about vegetation clearing rules.</p>
+                        </div>
+                    </div>
+
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="vegetation_protected" name="protected_vegetation" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">My property has protected vegetation or habitat restrictions</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="vegetation_none" name="protected_vegetation" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No vegetation restrictions that I know of</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="vegetation_unsure" name="protected_vegetation" value="unsure" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Unsure about vegetation restrictions</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Heritage Listings Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Heritage Listings 
+                    <button type="button" id="heritage-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Is your property heritage-listed or in a heritage area?</p>
+                
+                <div id="heritage-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Heritage protection means:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Restrictions on renovations or changes</li>
+                            <li>Requirements for heritage approvals</li>
+                            <li>Potential grants or incentives available</li>
+                            <li>Special rules for maintenance and repairs</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Types of heritage listing:</h4>
+                        <ul style="color: #34495e; margin: 0;">
+                            <li>Queensland Heritage Register</li>
+                            <li>Local heritage overlay</li>
+                            <li>World Heritage List</li>
+                            <li>Character housing areas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="heritage_yes" name="heritage_listing" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - property is heritage-listed or in heritage area</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="heritage_no" name="heritage_listing" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no heritage restrictions</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="heritage_unsure" name="heritage_listing" value="unsure" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Unsure about heritage status</span>
+                    </label>
+                </div>
+
+                <div id="heritage-details" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload heritage documentation (optional):</label>
+                        <input type="file" id="heritage_upload" name="heritage_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description:</label>
+                        <textarea id="heritage_description" name="heritage_description" rows="3"
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seller Disclosure Limits Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #e8f4fd; border: 1px solid #bee5eb; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #17a2b8; padding-bottom: 8px; margin-bottom: 20px;">What You Are NOT Required to Investigate</h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">You do NOT need to research or provide information about these topics:</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 10px;">
+                        Flooding & Natural Hazards 
+                        <button type="button" id="flood-info-toggle" 
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
+                            ℹ️
+                        </button>
+                    </h3>
+                    
+                    <div id="flood-info-panel" style="display: none; margin-bottom: 15px;">
+                        <div style="padding: 10px; border: 1px solid #e1e8ed; border-radius: 6px; background: #f9f9f9; font-size: 13px;">
+                            <p style="color: #34495e; margin: 0;">You are not required to research flood history, natural disaster risks, or climate hazards. Only declare if you have personal experience of flooding/damage on your property.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 10px;">
+                        Planning Restrictions 
+                        <button type="button" id="planning-info-toggle" 
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
+                            ℹ️
+                        </button>
+                    </h3>
+                    
+                    <div id="planning-info-panel" style="display: none; margin-bottom: 15px;">
+                        <div style="padding: 10px; border: 1px solid #e1e8ed; border-radius: 6px; background: #f9f9f9; font-size: 13px;">
+                            <p style="color: #34495e; margin: 0;">You are not required to research council building restrictions, development potential, business use rules, or short-term rental regulations. Only declare what you know from personal experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 10px;">
+                        Vegetation & Wildlife 
+                        <button type="button" id="wildlife-info-toggle" 
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
+                            ℹ️
+                        </button>
+                    </h3>
+                    
+                    <div id="wildlife-info-panel" style="display: none; margin-bottom: 15px;">
+                        <div style="padding: 10px; border: 1px solid #e1e8ed; border-radius: 6px; background: #f9f9f9; font-size: 13px;">
+                            <p style="color: #34495e; margin: 0;">You are not required to research vegetation clearing rules, koala habitat restrictions, or protected species requirements. Only declare known restrictions or notices you have received.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <!-- SECTIONS 4-8 Placeholders -->
+
+        <!-- SECTION 4: Buildings & Structures -->
         <div id="section-4" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 4: Coming Soon</h1>
-            <p style="color: #6c757d; text-align: center; padding: 40px;">Section 4 content will be added here...</p>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 4: Buildings & Structures</h1>
+
+            <!-- Important Notice -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px;">
+                <h2 style="color: #2c3e50; margin-bottom: 15px;">⚠️ Declaration Requirements</h2>
+                <p style="color: #856404; margin: 0; font-weight: 500;">You must declare known building issues, work history, and safety compliance. Only disclose what you actually know - you are not required to investigate or warrant the property.</p>
+            </div>
+
+            <!-- Swimming Pool Safety Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Swimming Pool Safety 
+                    <button type="button" id="pool-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Does your property have a swimming pool or spa?</p>
+                
+                <div id="pool-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">You must declare if you have:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>In-ground or above-ground pools</li>
+                            <li>Spas and hot tubs</li>
+                            <li>Inflatable pools that hold more than 300mm of water</li>
+                            <li>Any body of water capable of drowning</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Your obligations:</h4>
+                        <p style="color: #34495e; margin: 0;">Declare what pool safety documentation you have. You are not required to obtain certificates if you don't already have them.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="pool_yes" name="has_pool" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - there is a pool or spa on the property</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="pool_no" name="has_pool" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no pool or spa</span>
+                    </label>
+                </div>
+
+                <!-- Pool Details - Conditional -->
+                <div id="pool-details" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Pool Details</h3>
+                    
+                    <h4 style="color: #34495e; margin-bottom: 10px;">Pool Safety Certificate</h4>
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px;">
+                            <input type="radio" name="pool_certificate" value="current" 
+                                   style="margin-right: 8px; transform: scale(1.1);">
+                            <span style="color: #2c3e50;">I have a current pool safety certificate</span>
+                        </label>
+                        <label style="display: block; margin-bottom: 5px;">
+                            <input type="radio" name="pool_certificate" value="notice" 
+                                   style="margin-right: 8px; transform: scale(1.1);">
+                            <span style="color: #2c3e50;">I have a notice stating no certificate is required</span>
+                        </label>
+                        <label style="display: block; margin-bottom: 15px;">
+                            <input type="radio" id="no_pool_cert" name="pool_certificate" value="none" 
+                                   style="margin-right: 8px; transform: scale(1.1);">
+                            <span style="color: #2c3e50;">I don't have the required pool safety documentation</span>
+                        </label>
+                    </div>
+
+                    <div id="pool-cert-upload" style="display: none; margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload pool safety certificate or notice:</label>
+                        <input type="file" id="pool_cert_file" name="pool_cert_file" accept=".pdf,.doc,.docx,.jpg,.png"
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+
+                    <!-- Community Pool - Only shows if community scheme selected in Section 1 -->
+                    <div id="community-pool" style="display: none;">
+                        <h4 style="color: #34495e; margin-bottom: 10px;">Community Pool</h4>
+                        <label style="display: block; margin-bottom: 5px;">
+                            <input type="radio" name="community_pool" value="yes" 
+                                   style="margin-right: 8px; transform: scale(1.1);">
+                            <span style="color: #2c3e50;">There is a shared pool in the complex/scheme</span>
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            <input type="radio" name="community_pool" value="no" 
+                                   style="margin-right: 8px; transform: scale(1.1);">
+                            <span style="color: #2c3e50;">No shared pool facilities</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Building Work History Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Building Work History 
+                    <button type="button" id="building-work-help-toggle" 
+                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ℹ️
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Have you done any building work yourself in the last 6 years?</p>
+                
+                <div id="building-work-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">You must declare if you did:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Building work yourself as the main contractor</li>
+                            <li>Major renovations or extensions</li>
+                            <li>Structural alterations</li>
+                            <li>Any work where you held the owner-builder permit</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Your disclosure obligation:</h4>
+                        <p style="color: #34495e; margin: 0;">Owner-builder work in the last 6 years must be disclosed. Provide details of what work was done and when.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="owner_builder_yes" name="owner_builder_work" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - I did owner-builder work in the last 6 years</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="owner_builder_no" name="owner_builder_work" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - all work was done by licensed contractors or no major work</span>
+                    </label>
+                </div>
+
+                <div id="owner-builder-details" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of work completed:</label>
+                        <textarea id="owner_builder_description" name="owner_builder_description" rows="3"
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Year work was completed:</label>
+                        <select id="work_year" name="work_year" 
+                                style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                            <option value="">Select year</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload owner-builder permits (optional):</label>
+                        <input type="file" id="owner_builder_permits" name="owner_builder_permits" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    
+                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 10px; border-radius: 4px;">
+                        <strong>Note:</strong> If you did owner-builder work, you may need to provide a Section 47 notice to the buyer.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Government Notices & Orders Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    Government Notices & Orders 
+                    <button type="button" id="govt-notices-help-toggle" 
+                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                        ❓
+                    </button>
+                </h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Have you received any notices from authorities about building issues?</p>
+                
+                <div id="govt-notices-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                    <div style="padding: 15px; border: 1px solid #e1e8ed; border-radius: 8px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">You must declare if you received:</h4>
+                        <ul style="color: #34495e; margin-bottom: 15px;">
+                            <li>Council notices about building violations</li>
+                            <li>Show cause notices for unapproved work</li>
+                            <li>Enforcement notices for safety issues</li>
+                            <li>Court orders requiring building work</li>
+                            <li>Fire safety compliance notices</li>
+                        </ul>
+                        
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">Your obligation:</h4>
+                        <p style="color: #34495e; margin: 0;">Disclose all notices received about your property, regardless of current status. Include copies of the notices and explain what action has been taken.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Building Compliance Notices</h3>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="building_notices_yes" name="building_compliance" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - I have received building compliance notices</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 20px;">
+                        <input type="radio" id="building_notices_no" name="building_compliance" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no building compliance issues</span>
+                    </label>
+                    
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Other Government Orders</h3>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="other_orders_yes" name="other_orders" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - I have received other orders requiring work or payment</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="other_orders_no" name="other_orders" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - no outstanding orders</span>
+                    </label>
+                </div>
+
+                <div id="govt-notices-details" style="display: none; margin-top: 20px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Current status:</label>
+                        <select id="notice_status" name="notice_status" 
+                                style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                            <option value="">Select status</option>
+                            <option value="not_started">Not started</option>
+                            <option value="in_progress">In progress</option>
+                            <option value="completed">Completed</option>
+                            <option value="disputed">Disputed</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload copies of notices: <span style="color: #e74c3c;">*</span></label>
+                        <input type="file" id="govt_notices_upload" name="govt_notices_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of issues and current status:</label>
+                        <textarea id="notices_description" name="notices_description" rows="4"
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial Buildings Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Commercial Buildings Only</h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Is this a commercial office building over 1,000m²?</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="commercial_yes" name="commercial_building" value="yes" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">Yes - large commercial office building</span>
+                    </label>
+                    <label style="display: block; margin-bottom: 10px;">
+                        <input type="radio" id="commercial_no" name="commercial_building" value="no" 
+                               style="margin-right: 8px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">No - residential or smaller commercial property</span>
+                    </label>
+                </div>
+
+                <div id="commercial-details" style="display: none; margin-top: 15px;">
+                    <label style="display: block; margin-bottom: 10px; font-weight: 600; color: #2c3e50;">Building Energy Efficiency Certificate available:</label>
+                    <div style="display: flex; gap: 20px;">
+                        <label><input type="radio" name="energy_certificate" value="yes" style="margin-right: 5px;"> Yes</label>
+                        <label><input type="radio" name="energy_certificate" value="no" style="margin-right: 5px;"> No</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Asbestos Information Section -->
+            <div style="margin-bottom: 30px; padding: 20px; background: #fff5f5; border: 1px solid #f5c6cb; border-radius: 8px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #e74c3c; padding-bottom: 8px; margin-bottom: 20px;">Asbestos Disclosure</h2>
+                <p style="margin-bottom: 15px; font-weight: 600; color: #721c24;">Declare building age - you are NOT required to warrant presence or absence of asbestos</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">
+                        Your Asbestos Obligations ⚠️
+                        <button type="button" id="asbestos-help-toggle" 
+                                style="background-color: #e74c3c; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
+                            ⚠️
+                        </button>
+                    </h3>
+                    
+                    <div id="asbestos-help-panel" style="display: none; transition: all 0.4s ease-in-out; overflow: hidden;">
+                        <div style="padding: 15px; border: 1px solid #f5c6cb; border-radius: 8px; background: linear-gradient(135deg, #fff5f5 0%, #f8d7da 100%); margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <h4 style="color: #2c3e50; margin-bottom: 10px;">What you must do:</h4>
+                            <ul style="color: #721c24; margin-bottom: 15px;">
+                                <li>Declare the age of your building (approximate is fine)</li>
+                                <li>You are NOT required to test for asbestos</li>
+                                <li>You are NOT required to warrant asbestos presence/absence</li>
+                                <li>Only declare if you have actual knowledge of asbestos</li>
+                            </ul>
+                            
+                            <h4 style="color: #2c3e50; margin-bottom: 10px;">What you don't need to do:</h4>
+                            <ul style="color: #721c24; margin: 0;">
+                                <li>Arrange professional testing</li>
+                                <li>Provide asbestos reports</li>
+                                <li>Investigate potential asbestos locations</li>
+                                <li>Make warranties about asbestos presence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Building Age</h3>
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">What year was your main building constructed:</label>
+                    <select id="building_age" name="building_age" 
+                            style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                        <option value="">Select construction period</option>
+                        <option value="before_1960">Before 1960</option>
+                        <option value="1960s">1960s</option>
+                        <option value="1970s">1970s</option>
+                        <option value="1980s">1980s</option>
+                        <option value="1990s">1990s</option>
+                        <option value="2000s">2000s</option>
+                        <option value="2010s">2010s</option>
+                        <option value="2020s">2020s</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #34495e; margin-bottom: 15px;">Asbestos Awareness Statement</h3>
+                    <label style="display: block;">
+                        <input type="checkbox" id="asbestos_understanding" name="asbestos_understanding" value="acknowledged" 
+                               style="margin-right: 10px; transform: scale(1.2);">
+                        <span style="font-weight: 500; color: #2c3e50;">I understand that I do not need to warrant whether asbestos is present, and buyers should arrange professional asbestos testing if concerned</span>
+                    </label>
+                </div>
+            </div>
         </div>
 
         <div id="section-5" class="form-section" style="display: none;">
@@ -603,6 +1375,24 @@
             setupHelpToggle('verbal-help-toggle', 'verbal-help-panel', '#138496', '#17a2b8');
             setupHelpToggle('utility-help-toggle', 'utility-help-panel', '#138496', '#17a2b8');
             setupHelpToggle('rental-help-toggle', 'rental-help-panel', '#138496', '#17a2b8');
+            
+            // Section 3 help toggles
+            setupHelpToggle('zoning-help-toggle', 'zoning-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('transport-help-toggle', 'transport-help-panel', '#495057', '#6c757d');
+            setupHelpToggle('environmental-help-toggle', 'environmental-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('env-notices-help-toggle', 'env-notices-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('trees-help-toggle', 'trees-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('vegetation-help-toggle', 'vegetation-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('heritage-help-toggle', 'heritage-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('flood-info-toggle', 'flood-info-panel', '#138496', '#17a2b8');
+            setupHelpToggle('planning-info-toggle', 'planning-info-panel', '#138496', '#17a2b8');
+            setupHelpToggle('wildlife-info-toggle', 'wildlife-info-panel', '#138496', '#17a2b8');
+            
+            // Section 4 help toggles
+            setupHelpToggle('pool-help-toggle', 'pool-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('building-work-help-toggle', 'building-work-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('govt-notices-help-toggle', 'govt-notices-help-panel', '#495057', '#6c757d');
+            setupHelpToggle('asbestos-help-toggle', 'asbestos-help-panel', '#c82333', '#e74c3c');
 
             // Section 1 functionality
             let sellerCount = 1;
@@ -672,6 +1462,159 @@
             document.getElementById('rental_no').addEventListener('change', function() {
                 if (this.checked) {
                     document.getElementById('rental-details').style.display = 'none';
+                }
+            });
+
+            // Section 3 functionality
+            // Property zoning conditional display
+            document.getElementById('zoning_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('zoning-details').style.display = 'block';
+                }
+            });
+
+            document.getElementById('zoning_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('zoning-details').style.display = 'none';
+                }
+            });
+
+            // Transport projects conditional display
+            function checkTransportDetails() {
+                const transportYes = document.getElementById('transport_yes').checked;
+                const resumptionYes = document.getElementById('resumption_yes').checked;
+                const showDetails = transportYes || resumptionYes;
+                document.getElementById('transport-details').style.display = showDetails ? 'block' : 'none';
+            }
+
+            document.getElementById('transport_yes').addEventListener('change', checkTransportDetails);
+            document.getElementById('transport_no').addEventListener('change', checkTransportDetails);
+            document.getElementById('resumption_yes').addEventListener('change', checkTransportDetails);
+            document.getElementById('resumption_no').addEventListener('change', checkTransportDetails);
+
+            // Environmental notices conditional display
+            function checkEnvironmentalDetails() {
+                const checkboxes = document.querySelectorAll('input[name="environmental_notices"]');
+                let hasNotices = false;
+                
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked && checkbox.value !== 'none') {
+                        hasNotices = true;
+                    }
+                });
+                
+                document.getElementById('environmental-details').style.display = hasNotices ? 'block' : 'none';
+                
+                // If "none" is checked, uncheck others
+                if (document.getElementById('no_env_notices').checked) {
+                    checkboxes.forEach(checkbox => {
+                        if (checkbox.value !== 'none') {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+            }
+
+            document.querySelectorAll('input[name="environmental_notices"]').forEach(checkbox => {
+                checkbox.addEventListener('change', checkEnvironmentalDetails);
+            });
+
+            // Tree disputes conditional display
+            document.getElementById('tree_disputes_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('tree-disputes-details').style.display = 'block';
+                }
+            });
+
+            document.getElementById('tree_disputes_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('tree-disputes-details').style.display = 'none';
+                }
+            });
+
+            // Heritage listing conditional display
+            function checkHeritageDetails() {
+                const heritageYes = document.getElementById('heritage_yes').checked;
+                const heritageUnsure = document.getElementById('heritage_unsure').checked;
+                const showDetails = heritageYes || heritageUnsure;
+                document.getElementById('heritage-details').style.display = showDetails ? 'block' : 'none';
+            }
+
+            document.getElementById('heritage_yes').addEventListener('change', checkHeritageDetails);
+            document.getElementById('heritage_no').addEventListener('change', checkHeritageDetails);
+            document.getElementById('heritage_unsure').addEventListener('change', checkHeritageDetails);
+
+            // Section 4 functionality
+            // Pool conditional display
+            document.getElementById('pool_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('pool-details').style.display = 'block';
+                    // Show community pool section if community scheme was selected in Section 1
+                    const communityYes = document.getElementById('community_yes');
+                    if (communityYes && communityYes.checked) {
+                        document.getElementById('community-pool').style.display = 'block';
+                    }
+                }
+            });
+
+            document.getElementById('pool_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('pool-details').style.display = 'none';
+                }
+            });
+
+            // Pool certificate upload conditional display
+            function checkPoolCertUpload() {
+                const hasCert = document.querySelector('input[name="pool_certificate"]:checked');
+                const uploadSection = document.getElementById('pool-cert-upload');
+                
+                if (hasCert && (hasCert.value === 'current' || hasCert.value === 'notice')) {
+                    uploadSection.style.display = 'block';
+                } else {
+                    uploadSection.style.display = 'none';
+                }
+            }
+
+            document.querySelectorAll('input[name="pool_certificate"]').forEach(radio => {
+                radio.addEventListener('change', checkPoolCertUpload);
+            });
+
+            // Owner-builder work conditional display
+            document.getElementById('owner_builder_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('owner-builder-details').style.display = 'block';
+                }
+            });
+
+            document.getElementById('owner_builder_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('owner-builder-details').style.display = 'none';
+                }
+            });
+
+            // Government notices conditional display
+            function checkGovtNotices() {
+                const buildingNotices = document.getElementById('building_notices_yes').checked;
+                const otherOrders = document.getElementById('other_orders_yes').checked;
+                const showDetails = buildingNotices || otherOrders;
+                document.getElementById('govt-notices-details').style.display = showDetails ? 'block' : 'none';
+            }
+
+            document.getElementById('building_notices_yes').addEventListener('change', checkGovtNotices);
+            document.getElementById('building_notices_no').addEventListener('change', checkGovtNotices);
+            document.getElementById('other_orders_yes').addEventListener('change', checkGovtNotices);
+            document.getElementById('other_orders_no').addEventListener('change', checkGovtNotices);
+
+            // Commercial building conditional display
+            document.getElementById('commercial_yes').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('commercial-details').style.display = 'block';
+                }
+            });
+
+            document.getElementById('commercial_no').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('commercial-details').style.display = 'none';
                 }
             });
 
