@@ -2974,13 +2974,8 @@
                 })
                 .then(response => {
                     if (response.ok) {
-                        // Try to parse JSON, but don't fail if it's empty or not JSON
-                        const contentType = response.headers.get('content-type');
-                        if (contentType && contentType.includes('application/json')) {
-                            return response.json().catch(() => ({})); // Return empty object if JSON parsing fails
-                        } else {
-                            return response.text().then(text => ({ responseText: text }));
-                        }
+                        // Logic Apps often return empty responses, so just return success
+                        return Promise.resolve({ success: true, status: response.status });
                     }
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 })
