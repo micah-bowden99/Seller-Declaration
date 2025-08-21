@@ -2917,6 +2917,113 @@
                 checkbox.addEventListener('change', checkBcIssuesDescription);
             });
 
+            // Form submission
+            document.getElementById('seller-disclosure-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitForm();
+            });
+
+            function submitForm() {
+                // Show loading state
+                const submitBtn = document.getElementById('submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+                
+                // Collect all form data
+                const formData = new FormData(document.getElementById('seller-disclosure-form'));
+                const data = {
+                    submissionDate: new Date().toISOString(),
+                    formData: {}
+                };
+                
+                // Convert FormData to object
+                for (let [key, value] of formData.entries()) {
+                    if (data.formData[key]) {
+                        // Handle multiple values (checkboxes, etc.)
+                        if (Array.isArray(data.formData[key])) {
+                            data.formData[key].push(value);
+                        } else {
+                            data.formData[key] = [data.formData[key], value];
+                        }
+                    } else {
+                        data.formData[key] = value;
+                    }
+                }
+                
+                // Add file information (files themselves can't be serialized to JSON easily)
+                const fileInputs = document.querySelectorAll('input[type="file"]');
+                data.fileInfo = {};
+                fileInputs.forEach(input => {
+                    if (input.files.length > 0) {
+                        data.fileInfo[input.name] = {
+                            fileCount: input.files.length,
+                            fileNames: Array.from(input.files).map(file => file.name),
+                            totalSize: Array.from(input.files).reduce((sum, file) => sum + file.size, 0)
+                        };
+                    }
+                });
+                
+                // Submit to HTTP trigger
+                fetch('https://prod-53.japaneast.logic.azure.com:443/workflows/6eb69b79c3e54e388c5a41295b079978/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=I6Y05R4N4TFJjI9L9tsYwh9C7vGXOYL9wiwWtVAZXYw', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                })
+                .then(result => {
+                    // Success
+                    showSubmissionSuccess();
+                })
+                .catch(error => {
+                    console.error('Submission error:', error);
+                    showSubmissionError(error.message);
+                })
+                .finally(() => {
+                    // Reset button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+            }
+            
+            function showSubmissionSuccess() {
+                // Hide form and show success message
+                document.getElementById('seller-disclosure-form').style.display = 'none';
+                document.querySelector('div[style*="background: white"][style*="padding: 20px"]').style.display = 'none';
+                
+                const successDiv = document.createElement('div');
+                successDiv.style.cssText = 'background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 30px; border-radius: 8px; text-align: center; margin-top: 20px;';
+                successDiv.innerHTML = `
+                    <h2 style="color: #155724; margin-bottom: 15px;">✅ Form Submitted Successfully!</h2>
+                    <p style="margin-bottom: 15px;">Your seller disclosure form has been submitted and processed.</p>
+                    <p style="margin: 0; font-size: 14px; color: #856404;">Submission completed at: ${new Date().toLocaleString()}</p>
+                `;
+                
+                document.body.appendChild(successDiv);
+            }
+            
+            function showSubmissionError(errorMessage) {
+                // Show error message
+                const errorDiv = document.createElement('div');
+                errorDiv.style.cssText = 'background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 20px; border-radius: 8px; margin-top: 20px;';
+                errorDiv.innerHTML = `
+                    <h3 style="color: #721c24; margin-bottom: 10px;">❌ Submission Failed</h3>
+                    <p style="margin-bottom: 10px;">There was an error submitting your form:</p>
+                    <p style="margin-bottom: 15px; font-style: italic;">${errorMessage}</p>
+                    <button onclick="this.parentElement.remove()" style="background-color: #dc3545; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Close</button>
+                `;
+                
+                // Insert after form
+                document.getElementById('seller-disclosure-form').insertAdjacentElement('afterend', errorDiv);
+            }
+
             // Navigation buttons
             document.getElementById('next-btn').addEventListener('click', function() {
                 if (currentSection < totalSections) {
