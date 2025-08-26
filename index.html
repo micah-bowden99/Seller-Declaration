@@ -7,22 +7,22 @@
     <style>
         /* KCH Lawyers Form Enhancements */
         input:focus, select:focus, textarea:focus {
-            border-color: #00FF00 !important;
+            border-color: #8BC34A !important;
             outline: none;
-            box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.1);
+            box-shadow: 0 0 0 2px rgba(139, 195, 74, 0.1);
         }
         
         input:hover, select:hover, textarea:hover {
-            border-color: #7fdf7f;
+            border-color: #9CCC65;
         }
         
         button:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(139, 195, 74, 0.2);
         }
         
         .kch-logo {
-            background: linear-gradient(135deg, #00FF00 0%, #7fdf7f 100%);
+            background: linear-gradient(135deg, #8BC34A 0%, #9CCC65 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -39,7 +39,7 @@
             left: 0;
             width: 50px;
             height: 3px;
-            background: linear-gradient(90deg, #00FF00 0%, rgba(0, 255, 0, 0.3) 100%);
+            background: linear-gradient(90deg, #8BC34A 0%, rgba(139, 195, 74, 0.3) 100%);
             border-radius: 2px;
         }
     </style>
@@ -50,15 +50,14 @@
     <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
         <div style="text-align: center; margin-bottom: 30px;">
             <div style="display: inline-block; margin-bottom: 15px;">
-                <div class="kch-logo" style="font-weight: bold; font-size: 24px; margin-bottom: 5px;">/// KCH</div>
-                <div style="color: #2c3e50; font-weight: bold; font-size: 24px;">LAWYERS</div>
+                <img src="logo.jpg" alt="KCH Lawyers" style="height: 80px; margin-bottom: 10px;">
                 <div style="color: #6c757d; font-size: 12px; margin-top: 5px;">Excellence Experience Integrity</div>
             </div>
             <h1 style="color: #2c3e50; margin: 20px 0;">Queensland Property Seller Disclosure Form</h1>
         </div>
         <div style="display: flex; justify-content: center; margin-bottom: 10px;">
             <div id="progress-bar" style="width: 100%; height: 8px; background-color: #e1e8ed; border-radius: 4px; overflow: hidden;">
-                <div id="progress-fill" style="height: 100%; background-color: #00FF00; width: 16.67%; transition: width 0.3s ease;"></div>
+                <div id="progress-fill" style="height: 100%; background-color: #8BC34A; width: 16.67%; transition: width 0.3s ease;"></div>
             </div>
         </div>
         <div style="text-align: center; color: #6c757d; font-size: 14px;">
@@ -66,15 +65,15 @@
         </div>
     </div>
 
-    <form id="seller-disclosure-form" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 3px solid #00FF00;">
+    <form id="seller-disclosure-form" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
         
         <!-- SECTION 1: Basic Property Information -->
         <div id="section-1" class="form-section" style="display: block;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 1: Basic Property Information</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #8BC34A; padding-bottom: 10px; margin-bottom: 30px;">Section 1: Basic Property Information</h1>
 
             <!-- Seller Details Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Seller Details</h2>
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">Seller Details</h2>
                 <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Who is selling this property?</p>
                 
                 <div style="margin-bottom: 15px;">
@@ -92,14 +91,14 @@
                 </div>
                 
                 <button type="button" id="add-seller-btn" 
-                        style="background-color: #00FF00; color: #2c3e50; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background-color 0.3s;">
+                        style="background-color: #8BC34A; color: #2c3e50; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background-color 0.3s;">
                     + Add another seller
                 </button>
             </div>
 
             <!-- Property Address Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Property Address</h2>
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">Property Address</h2>
                 <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">What is the property address?</p>
                 
                 <div style="display: grid; grid-template-columns: 1fr 3fr; gap: 15px; margin-bottom: 15px;">
@@ -131,7 +130,7 @@
 
             <!-- Legal Description Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Legal Description 
                     <button type="button" id="legal-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -168,7 +167,7 @@
 
             <!-- Community Scheme Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Community Scheme 
                     <button type="button" id="community-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -233,11 +232,11 @@
 
         <!-- SECTION 2: Property Documents & Agreements -->
         <div id="section-2" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 2: Property Documents & Agreements</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #8BC34A; padding-bottom: 10px; margin-bottom: 30px;">Section 2: Property Documents & Agreements</h1>
 
             <!-- Required Documents Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Required Documents 
                     <button type="button" id="documents-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -277,7 +276,7 @@
 
             <!-- Property Agreements & Restrictions Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Property Agreements & Restrictions 
                     <button type="button" id="agreements-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -480,7 +479,7 @@
 
             <!-- Rental History Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Rental History 
                     <button type="button" id="rental-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -533,11 +532,11 @@
 
         <!-- SECTION 3: Planning, Environment & Land Use -->
         <div id="section-3" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 3: Planning, Environment & Land Use</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #8BC34A; padding-bottom: 10px; margin-bottom: 30px;">Section 3: Planning, Environment & Land Use</h1>
 
             <!-- Property Zoning Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Property Zoning 
                     <button type="button" id="zoning-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -594,7 +593,7 @@
 
             <!-- Government Transport & Infrastructure Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Government Transport & Infrastructure 
                     <button type="button" id="transport-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -668,7 +667,7 @@
 
             <!-- Environmental Issues Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Environmental Issues 
                     <button type="button" id="environmental-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -766,7 +765,7 @@
 
             <!-- Trees & Vegetation Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Trees & Vegetation 
                     <button type="button" id="trees-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -857,7 +856,7 @@
 
             <!-- Heritage Listings Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Heritage Listings 
                     <button type="button" id="heritage-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -977,7 +976,7 @@
 
         <!-- SECTION 4: Buildings & Structures -->
         <div id="section-4" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 4: Buildings & Structures</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #8BC34A; padding-bottom: 10px; margin-bottom: 30px;">Section 4: Buildings & Structures</h1>
 
             <!-- Important Notice -->
             <div style="margin-bottom: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px;">
@@ -987,7 +986,7 @@
 
             <!-- Swimming Pool Safety Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Swimming Pool Safety 
                     <button type="button" id="pool-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1072,7 +1071,7 @@
 
             <!-- Building Work History Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Building Work History 
                     <button type="button" id="building-work-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1145,7 +1144,7 @@
 
             <!-- Government Notices & Orders Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Government Notices & Orders 
                     <button type="button" id="govt-notices-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1225,7 +1224,7 @@
 
             <!-- Commercial Buildings Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Commercial Buildings Only</h2>
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">Commercial Buildings Only</h2>
                 <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Is this a commercial office building over 1,000m²?</p>
                 
                 <div style="margin-bottom: 20px;">
@@ -1316,7 +1315,7 @@
 
         <!-- SECTION 5: Rates & Services -->
         <div id="section-5" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 5: Rates & Services</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #8BC34A; padding-bottom: 10px; margin-bottom: 30px;">Section 5: Rates & Services</h1>
 
             <!-- Important Notice -->
             <div style="margin-bottom: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px;">
@@ -1326,7 +1325,7 @@
 
             <!-- Council Rates Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Council Rates 
                     <button type="button" id="rates-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1490,7 +1489,7 @@
 
             <!-- Water Services Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Water Services 
                     <button type="button" id="water-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1645,7 +1644,7 @@
 
             <!-- Other Utility Information Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Other Utility Information 
                     <button type="button" id="utilities-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1770,7 +1769,7 @@
 
         <!-- SECTION 6: Body Corporate Information -->
         <div id="section-6" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 6: Body Corporate Information</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #8BC34A; padding-bottom: 10px; margin-bottom: 30px;">Section 6: Body Corporate Information</h1>
 
             <!-- Important Notice -->
             <div style="margin-bottom: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px;">
@@ -1789,7 +1788,7 @@
                 
                 <!-- Scheme Type Section -->
                 <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                         Scheme Type 
                         <button type="button" id="scheme-type-help-toggle" 
                                 style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
@@ -1845,7 +1844,7 @@
 
                 <!-- Community Titles Scheme Documents -->
                 <div id="community-titles-docs" style="display: none; margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Community Titles Scheme Documents</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">Community Titles Scheme Documents</h2>
                     
                     <!-- Community Management Statement -->
                     <div style="margin-bottom: 30px;">
@@ -1991,7 +1990,7 @@
 
                 <!-- BUGTA Scheme Documents -->
                 <div id="bugta-docs" style="display: none; margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">BUGTA Scheme Documents</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">BUGTA Scheme Documents</h2>
                     
                     <!-- BUGTA Body Corporate Certificate -->
                     <div style="margin-bottom: 30px;">
@@ -2085,7 +2084,7 @@
 
                 <!-- Body Corporate Financial Information -->
                 <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Body Corporate Financial Information</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">Body Corporate Financial Information</h2>
                     <p style="margin-bottom: 15px; color: #34495e; font-style: italic;">This helps complete the disclosure</p>
                     
                     <!-- Regular Contributions -->
@@ -2175,7 +2174,7 @@
 
                 <!-- Additional Body Corporate Information -->
                 <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Additional Body Corporate Information</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">Additional Body Corporate Information</h2>
                     
                     <!-- Management Arrangements -->
                     <div style="margin-bottom: 30px;">
@@ -2465,7 +2464,8 @@
                 newSellerDiv.innerHTML = `
                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Additional seller name:</label>
                     <input type="text" id="additional_seller_${sellerCount}" name="additional_seller_${sellerCount}" 
-                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">                `;
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
+                `;
                 additionalSellers.appendChild(newSellerDiv);
             });
 
@@ -3089,7 +3089,7 @@
                 this.style.backgroundColor = '#2980b9';
             });
             document.getElementById('add-seller-btn').addEventListener('mouseleave', function() {
-                this.style.backgroundColor = '#00FF00';
+                this.style.backgroundColor = '#8BC34A';
             });
 
             document.getElementById('next-btn').addEventListener('mouseenter', function() {
