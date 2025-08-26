@@ -21,6 +21,12 @@
             box-shadow: 0 4px 8px rgba(139, 195, 74, 0.2);
         }
         
+        /* Fix icon centering in circular buttons */
+        button[style*="border-radius: 50%"] {
+            line-height: 1 !important;
+            font-weight: bold !important;
+        }
+        
         .kch-logo {
             background: linear-gradient(135deg, #8BC34A 0%, #9CCC65 100%);
             -webkit-background-clip: text;
@@ -133,7 +139,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Legal Description 
                     <button type="button" id="legal-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -170,7 +176,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Community Scheme 
                     <button type="button" id="community-help-toggle" 
-                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -239,7 +245,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Required Documents 
                     <button type="button" id="documents-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -279,7 +285,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Property Agreements & Restrictions 
                     <button type="button" id="agreements-help-toggle" 
-                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -391,7 +397,7 @@
                         <h4 style="color: #2c3e50; margin-bottom: 10px;">
                             Verbal/Handshake Agreements 
                             <button type="button" id="verbal-help-toggle" 
-                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                    style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                                 ?
                             </button>
                         </h4>
@@ -437,7 +443,7 @@
                         <h4 style="color: #2c3e50; margin-bottom: 10px;">
                             Government/Utility Rights 
                             <button type="button" id="utility-help-toggle" 
-                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                    style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                                 ?
                             </button>
                         </h4>
@@ -482,7 +488,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Rental History 
                     <button type="button" id="rental-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -539,7 +545,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Property Zoning 
                     <button type="button" id="zoning-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -596,7 +602,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Government Transport & Infrastructure 
                     <button type="button" id="transport-help-toggle" 
-                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -670,7 +676,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Environmental Issues 
                     <button type="button" id="environmental-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -715,8 +721,8 @@
                     <h3 style="color: #34495e; margin-bottom: 15px;">
                         Environmental Notices 
                         <button type="button" id="env-notices-help-toggle" 
-                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
-                            ℹ️
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center;">
+                            !
                         </button>
                     </h3>
                     <p style="margin-bottom: 10px; color: #34495e;">Have you received any government notices about:</p>
@@ -768,7 +774,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Trees & Vegetation 
                     <button type="button" id="trees-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -825,8 +831,8 @@
                     <h3 style="color: #34495e; margin-bottom: 15px;">
                         Protected Vegetation 
                         <button type="button" id="vegetation-help-toggle" 
-                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
-                            ℹ️
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center;">
+                            !
                         </button>
                     </h3>
                     
@@ -859,7 +865,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Heritage Listings 
                     <button type="button" id="heritage-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -926,8 +932,8 @@
                     <h3 style="color: #34495e; margin-bottom: 10px;">
                         Flooding & Natural Hazards 
                         <button type="button" id="flood-info-toggle" 
-                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
-                            ℹ️
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center;">
+                            !
                         </button>
                     </h3>
                     
@@ -942,8 +948,8 @@
                     <h3 style="color: #34495e; margin-bottom: 10px;">
                         Planning Restrictions 
                         <button type="button" id="planning-info-toggle" 
-                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
-                            ℹ️
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center;">
+                            !
                         </button>
                     </h3>
                     
@@ -958,8 +964,8 @@
                     <h3 style="color: #34495e; margin-bottom: 10px;">
                         Vegetation & Wildlife 
                         <button type="button" id="wildlife-info-toggle" 
-                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease;">
-                            ℹ️
+                                style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; cursor: pointer; margin-left: 5px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center;">
+                            !
                         </button>
                     </h3>
                     
@@ -989,7 +995,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Swimming Pool Safety 
                     <button type="button" id="pool-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -1074,7 +1080,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Building Work History 
                     <button type="button" id="building-work-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -1147,7 +1153,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Government Notices & Orders 
                     <button type="button" id="govt-notices-help-toggle" 
-                            style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -1258,7 +1264,7 @@
                     <h3 style="color: #34495e; margin-bottom: 15px;">
                         Your Asbestos Obligations ⚠️
                         <button type="button" id="asbestos-help-toggle" 
-                                style="background-color: #e74c3c; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                style="background-color: #e74c3c; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; line-height: 1; font-weight: bold;">
                             !
                         </button>
                     </h3>
@@ -1328,7 +1334,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Council Rates 
                     <button type="button" id="rates-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -1492,7 +1498,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Water Services 
                     <button type="button" id="water-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -1647,7 +1653,7 @@
                 <h2 style="color: #2c3e50; border-bottom: 2px solid #8BC34A; padding-bottom: 8px; margin-bottom: 20px;">
                     Other Utility Information 
                     <button type="button" id="utilities-help-toggle" 
-                            style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                            style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                         ?
                     </button>
                 </h2>
@@ -1851,7 +1857,7 @@
                         <h3 style="color: #34495e; margin-bottom: 15px;">
                             Community Management Statement 
                             <button type="button" id="cms-help-toggle" 
-                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                    style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                                 ?
                             </button>
                         </h3>
@@ -1903,7 +1909,7 @@
                         <h3 style="color: #34495e; margin-bottom: 15px;">
                             Body Corporate Certificate 
                             <button type="button" id="bc-cert-help-toggle" 
-                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                    style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                                 ?
                             </button>
                         </h3>
@@ -1997,7 +2003,7 @@
                         <h3 style="color: #34495e; margin-bottom: 15px;">
                             Body Corporate Certificate (BUGTA) 
                             <button type="button" id="bugta-cert-help-toggle" 
-                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                    style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                                 ?
                             </button>
                         </h3>
@@ -2199,7 +2205,7 @@
                         <h3 style="color: #34495e; margin-bottom: 15px;">
                             Recent Issues 
                             <button type="button" id="bc-issues-help-toggle" 
-                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                    style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                                 ?
                             </button>
                         </h3>
@@ -2250,7 +2256,7 @@
                         <h3 style="color: #34495e; margin-bottom: 15px;">
                             Exclusive Use Areas 
                             <button type="button" id="exclusive-use-help-toggle" 
-                                    style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
+                                    style="background-color: #8BC34A; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
                                 ?
                             </button>
                         </h3>
@@ -2412,47 +2418,47 @@
             showSection(1);
 
             // Setup all help toggles
-            setupHelpToggle('legal-help-toggle', 'legal-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('community-help-toggle', 'community-help-panel', '#495057', '#6c757d');
-            setupHelpToggle('documents-help-toggle', 'documents-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('agreements-help-toggle', 'agreements-help-panel', '#495057', '#6c757d');
-            setupHelpToggle('verbal-help-toggle', 'verbal-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('utility-help-toggle', 'utility-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('rental-help-toggle', 'rental-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('legal-help-toggle', 'legal-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('community-help-toggle', 'community-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('documents-help-toggle', 'documents-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('agreements-help-toggle', 'agreements-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('verbal-help-toggle', 'verbal-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('utility-help-toggle', 'utility-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('rental-help-toggle', 'rental-help-panel', '#7faa47', '#8BC34A');
             
             // Section 3 help toggles
-            setupHelpToggle('zoning-help-toggle', 'zoning-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('transport-help-toggle', 'transport-help-panel', '#495057', '#6c757d');
-            setupHelpToggle('environmental-help-toggle', 'environmental-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('env-notices-help-toggle', 'env-notices-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('trees-help-toggle', 'trees-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('vegetation-help-toggle', 'vegetation-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('heritage-help-toggle', 'heritage-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('flood-info-toggle', 'flood-info-panel', '#138496', '#17a2b8');
-            setupHelpToggle('planning-info-toggle', 'planning-info-panel', '#138496', '#17a2b8');
-            setupHelpToggle('wildlife-info-toggle', 'wildlife-info-panel', '#138496', '#17a2b8');
+            setupHelpToggle('zoning-help-toggle', 'zoning-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('transport-help-toggle', 'transport-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('environmental-help-toggle', 'environmental-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('env-notices-help-toggle', 'env-notices-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('trees-help-toggle', 'trees-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('vegetation-help-toggle', 'vegetation-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('heritage-help-toggle', 'heritage-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('flood-info-toggle', 'flood-info-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('planning-info-toggle', 'planning-info-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('wildlife-info-toggle', 'wildlife-info-panel', '#7faa47', '#8BC34A');
             
             // Section 4 help toggles
-            setupHelpToggle('pool-help-toggle', 'pool-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('building-work-help-toggle', 'building-work-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('govt-notices-help-toggle', 'govt-notices-help-panel', '#495057', '#6c757d');
+            setupHelpToggle('pool-help-toggle', 'pool-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('building-work-help-toggle', 'building-work-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('govt-notices-help-toggle', 'govt-notices-help-panel', '#7faa47', '#8BC34A');
             setupHelpToggle('asbestos-help-toggle', 'asbestos-help-panel', '#c82333', '#e74c3c');
 
             // Section 5: Rates & Services help toggles
-            setupHelpToggle('rates-help-toggle', 'rates-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('concessions-help-toggle', 'concessions-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('exemption-help-toggle', 'exemption-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('water-help-toggle', 'water-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('water-estimate-help-toggle', 'water-estimate-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('utilities-help-toggle', 'utilities-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('rates-help-toggle', 'rates-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('concessions-help-toggle', 'concessions-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('exemption-help-toggle', 'exemption-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('water-help-toggle', 'water-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('water-estimate-help-toggle', 'water-estimate-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('utilities-help-toggle', 'utilities-help-panel', '#7faa47', '#8BC34A');
 
             // Section 6: Body Corporate help toggles
-            setupHelpToggle('scheme-type-help-toggle', 'scheme-type-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('cms-help-toggle', 'cms-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('bc-cert-help-toggle', 'bc-cert-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('bugta-cert-help-toggle', 'bugta-cert-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('bc-issues-help-toggle', 'bc-issues-help-panel', '#138496', '#17a2b8');
-            setupHelpToggle('exclusive-use-help-toggle', 'exclusive-use-help-panel', '#138496', '#17a2b8');
+            setupHelpToggle('scheme-type-help-toggle', 'scheme-type-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('cms-help-toggle', 'cms-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('bc-cert-help-toggle', 'bc-cert-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('bugta-cert-help-toggle', 'bugta-cert-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('bc-issues-help-toggle', 'bc-issues-help-panel', '#7faa47', '#8BC34A');
+            setupHelpToggle('exclusive-use-help-toggle', 'exclusive-use-help-panel', '#7faa47', '#8BC34A');
 
             // Section 1 functionality
             let sellerCount = 1;
@@ -3075,12 +3081,22 @@
             document.getElementById('next-btn').addEventListener('click', function() {
                 if (currentSection < totalSections) {
                     showSection(currentSection + 1);
+                    // Scroll to top of the form
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 }
             });
 
             document.getElementById('prev-btn').addEventListener('click', function() {
                 if (currentSection > 1) {
                     showSection(currentSection - 1);
+                    // Scroll to top of the form
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 }
             });
 
