@@ -3,16 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Queensland Property Seller Disclosure Form</title>
+    <title>Queensland Property Seller Disclosure Form - KCH Lawyers</title>
+    <style>
+        /* KCH Lawyers Form Enhancements */
+        input:focus, select:focus, textarea:focus {
+            border-color: #00FF00 !important;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.1);
+        }
+        
+        input:hover, select:hover, textarea:hover {
+            border-color: #7fdf7f;
+        }
+        
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+        }
+        
+        .kch-logo {
+            background: linear-gradient(135deg, #00FF00 0%, #7fdf7f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .form-section h1, .form-section h2 {
+            position: relative;
+        }
+        
+        .form-section h1::after, .form-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #00FF00 0%, rgba(0, 255, 0, 0.3) 100%);
+            border-radius: 2px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
+<body style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f5f7fa;">
 
     <!-- Progress Indicator -->
     <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
-        <h1 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">Queensland Property Seller Disclosure Form</h1>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div style="display: inline-block; margin-bottom: 15px;">
+                <div class="kch-logo" style="font-weight: bold; font-size: 24px; margin-bottom: 5px;">/// KCH</div>
+                <div style="color: #2c3e50; font-weight: bold; font-size: 24px;">LAWYERS</div>
+                <div style="color: #6c757d; font-size: 12px; margin-top: 5px;">Excellence Experience Integrity</div>
+            </div>
+            <h1 style="color: #2c3e50; margin: 20px 0;">Queensland Property Seller Disclosure Form</h1>
+        </div>
         <div style="display: flex; justify-content: center; margin-bottom: 10px;">
             <div id="progress-bar" style="width: 100%; height: 8px; background-color: #e1e8ed; border-radius: 4px; overflow: hidden;">
-                <div id="progress-fill" style="height: 100%; background-color: #3498db; width: 16.67%; transition: width 0.3s ease;"></div>
+                <div id="progress-fill" style="height: 100%; background-color: #00FF00; width: 16.67%; transition: width 0.3s ease;"></div>
             </div>
         </div>
         <div style="text-align: center; color: #6c757d; font-size: 14px;">
@@ -20,52 +66,52 @@
         </div>
     </div>
 
-    <form id="seller-disclosure-form" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <form id="seller-disclosure-form" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 3px solid #00FF00;">
         
         <!-- SECTION 1: Basic Property Information -->
         <div id="section-1" class="form-section" style="display: block;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 1: Basic Property Information</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 1: Basic Property Information</h1>
 
             <!-- Seller Details Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Seller Details</h2>
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Seller Details</h2>
                 <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Who is selling this property?</p>
                 
                 <div style="margin-bottom: 15px;">
                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Primary seller name: <span style="color: #e74c3c;">*</span></label>
                     <input type="text" id="primary_seller" name="primary_seller" required 
-                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                 </div>
                 
                 <div id="additional-sellers">
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Additional seller name:</label>
                         <input type="text" id="additional_seller_1" name="additional_seller_1" 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                 </div>
                 
                 <button type="button" id="add-seller-btn" 
-                        style="background-color: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; transition: background-color 0.3s;">
+                        style="background-color: #00FF00; color: #2c3e50; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background-color 0.3s;">
                     + Add another seller
                 </button>
             </div>
 
             <!-- Property Address Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Property Address</h2>
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Property Address</h2>
                 <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">What is the property address?</p>
                 
                 <div style="display: grid; grid-template-columns: 1fr 3fr; gap: 15px; margin-bottom: 15px;">
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Street number: <span style="color: #e74c3c;">*</span></label>
                         <input type="text" id="street_number" name="street_number" required 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Street name: <span style="color: #e74c3c;">*</span></label>
                         <input type="text" id="street_name" name="street_name" required 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                 </div>
                 
@@ -73,19 +119,19 @@
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Suburb: <span style="color: #e74c3c;">*</span></label>
                         <input type="text" id="suburb" name="suburb" required 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Postcode: <span style="color: #e74c3c;">*</span></label>
                         <input type="text" id="postcode" name="postcode" required 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                 </div>
             </div>
 
             <!-- Legal Description Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Legal Description 
                     <button type="button" id="legal-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -110,19 +156,19 @@
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Lot number: <span style="color: #e74c3c;">*</span></label>
                         <input type="text" id="lot_number" name="lot_number" required 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Plan number: <span style="color: #e74c3c;">*</span></label>
                         <input type="text" id="plan_number" name="plan_number" required 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                 </div>
             </div>
 
             <!-- Community Scheme Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Community Scheme 
                     <button type="button" id="community-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -187,11 +233,11 @@
 
         <!-- SECTION 2: Property Documents & Agreements -->
         <div id="section-2" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 2: Property Documents & Agreements</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 2: Property Documents & Agreements</h1>
 
             <!-- Required Documents Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Required Documents 
                     <button type="button" id="documents-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -231,7 +277,7 @@
 
             <!-- Property Agreements & Restrictions Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Property Agreements & Restrictions 
                     <button type="button" id="agreements-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -287,24 +333,24 @@
                                 <div>
                                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Lease start date:</label>
                                     <input type="date" id="lease_start" name="lease_start" 
-                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                                 </div>
                                 <div>
                                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Lease end date:</label>
                                     <input type="date" id="lease_end" name="lease_end" 
-                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                                 </div>
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
                                 <div>
                                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Weekly/monthly rent: $</label>
                                     <input type="number" id="rent_amount" name="rent_amount" step="0.01"
-                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                                 </div>
                                 <div>
                                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Bond amount: $</label>
                                     <input type="number" id="bond_amount" name="bond_amount" step="0.01"
-                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                                 </div>
                             </div>
                             <div>
@@ -331,12 +377,12 @@
                             <div style="margin-bottom: 15px;">
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload agreement documents:</label>
                                 <input type="file" id="agreement_upload" name="agreement_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Brief description:</label>
                                 <textarea id="written_description" name="written_description" rows="3"
-                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                             </div>
                         </div>
                     </div>
@@ -372,17 +418,17 @@
                             <div style="margin-bottom: 15px;">
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Who is the agreement with:</label>
                                 <input type="text" id="verbal_with" name="verbal_with" 
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                             <div style="margin-bottom: 15px;">
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">What was agreed:</label>
                                 <textarea id="verbal_agreement" name="verbal_agreement" rows="3"
-                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                             </div>
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">How long has this been happening:</label>
                                 <input type="text" id="verbal_duration" name="verbal_duration" 
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                         </div>
                     </div>
@@ -420,12 +466,12 @@
                             <div style="margin-bottom: 15px;">
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of what crosses/affects your property:</label>
                                 <textarea id="utility_description" name="utility_description" rows="3"
-                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                             </div>
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload any documents/plans:</label>
                                 <input type="file" id="utility_upload" name="utility_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                         </div>
                     </div>
@@ -434,7 +480,7 @@
 
             <!-- Rental History Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Rental History 
                     <button type="button" id="rental-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -467,7 +513,7 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">When was rent last increased:</label>
                         <input type="date" id="rent_increase_date" name="rent_increase_date" 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 10px; font-weight: 600; color: #2c3e50;">Do you have evidence of this date?</label>
@@ -479,7 +525,7 @@
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload rent increase notice (optional):</label>
                         <input type="file" id="rent_notice_upload" name="rent_notice_upload" accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                 </div>
             </div>
@@ -487,11 +533,11 @@
 
         <!-- SECTION 3: Planning, Environment & Land Use -->
         <div id="section-3" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 3: Planning, Environment & Land Use</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 3: Planning, Environment & Land Use</h1>
 
             <!-- Property Zoning Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Property Zoning 
                     <button type="button" id="zoning-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -542,13 +588,13 @@
                 <div id="zoning-details" style="display: none; margin-top: 15px;">
                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Property zoning:</label>
                     <input type="text" id="property_zoning" name="property_zoning" 
-                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                 </div>
             </div>
 
             <!-- Government Transport & Infrastructure Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Government Transport & Infrastructure 
                     <button type="button" id="transport-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -610,19 +656,19 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload copies of notices: <span style="color: #e74c3c;">*</span></label>
                         <input type="file" id="transport_upload" name="transport_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Brief description:</label>
                         <textarea id="transport_description" name="transport_description" rows="3"
-                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                     </div>
                 </div>
             </div>
 
             <!-- Environmental Issues Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Environmental Issues 
                     <button type="button" id="environmental-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -708,19 +754,19 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload copies of notices: <span style="color: #e74c3c;">*</span></label>
                         <input type="file" id="env_upload" name="env_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of issues:</label>
                         <textarea id="env_description" name="env_description" rows="3"
-                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                     </div>
                 </div>
             </div>
 
             <!-- Trees & Vegetation Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Trees & Vegetation 
                     <button type="button" id="trees-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -766,12 +812,12 @@
                         <div style="margin-bottom: 15px;">
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload tree orders/applications: <span style="color: #e74c3c;">*</span></label>
                             <input type="file" id="tree_upload" name="tree_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
                         <div>
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of tree issues:</label>
                             <textarea id="tree_description" name="tree_description" rows="3"
-                                      style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                      style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                         </div>
                     </div>
                 </div>
@@ -811,7 +857,7 @@
 
             <!-- Heritage Listings Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Heritage Listings 
                     <button type="button" id="heritage-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -862,12 +908,12 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload heritage documentation (optional):</label>
                         <input type="file" id="heritage_upload" name="heritage_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description:</label>
                         <textarea id="heritage_description" name="heritage_description" rows="3"
-                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                     </div>
                 </div>
             </div>
@@ -931,7 +977,7 @@
 
         <!-- SECTION 4: Buildings & Structures -->
         <div id="section-4" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 4: Buildings & Structures</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 4: Buildings & Structures</h1>
 
             <!-- Important Notice -->
             <div style="margin-bottom: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px;">
@@ -941,7 +987,7 @@
 
             <!-- Swimming Pool Safety Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Swimming Pool Safety 
                     <button type="button" id="pool-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1004,7 +1050,7 @@
                     <div id="pool-cert-upload" style="display: none; margin-bottom: 20px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload pool safety certificate or notice:</label>
                         <input type="file" id="pool_cert_file" name="pool_cert_file" accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
 
                     <!-- Community Pool - Only shows if community scheme selected in Section 1 -->
@@ -1026,7 +1072,7 @@
 
             <!-- Building Work History Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Building Work History 
                     <button type="button" id="building-work-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1067,13 +1113,13 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of work completed:</label>
                         <textarea id="owner_builder_description" name="owner_builder_description" rows="3"
-                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                     </div>
                     
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Year work was completed:</label>
                         <select id="work_year" name="work_year" 
-                                style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             <option value="">Select year</option>
                             <option value="2025">2025</option>
                             <option value="2024">2024</option>
@@ -1088,7 +1134,7 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload owner-builder permits (optional):</label>
                         <input type="file" id="owner_builder_permits" name="owner_builder_permits" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     
                     <div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 10px; border-radius: 4px;">
@@ -1099,7 +1145,7 @@
 
             <!-- Government Notices & Orders Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Government Notices & Orders 
                     <button type="button" id="govt-notices-help-toggle" 
                             style="background-color: #6c757d; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1154,7 +1200,7 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Current status:</label>
                         <select id="notice_status" name="notice_status" 
-                                style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             <option value="">Select status</option>
                             <option value="not_started">Not started</option>
                             <option value="in_progress">In progress</option>
@@ -1166,20 +1212,20 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload copies of notices: <span style="color: #e74c3c;">*</span></label>
                         <input type="file" id="govt_notices_upload" name="govt_notices_upload" multiple accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description of issues and current status:</label>
                         <textarea id="notices_description" name="notices_description" rows="4"
-                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                     </div>
                 </div>
             </div>
 
             <!-- Commercial Buildings Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Commercial Buildings Only</h2>
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Commercial Buildings Only</h2>
                 <p style="margin-bottom: 15px; font-weight: 600; color: #34495e;">Is this a commercial office building over 1,000m²?</p>
                 
                 <div style="margin-bottom: 20px;">
@@ -1243,7 +1289,7 @@
                     <h3 style="color: #34495e; margin-bottom: 15px;">Building Age</h3>
                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">What year was your main building constructed:</label>
                     <select id="building_age" name="building_age" 
-                            style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                            style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         <option value="">Select construction period</option>
                         <option value="before_1960">Before 1960</option>
                         <option value="1960s">1960s</option>
@@ -1270,7 +1316,7 @@
 
         <!-- SECTION 5: Rates & Services -->
         <div id="section-5" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 5: Rates & Services</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 5: Rates & Services</h1>
 
             <!-- Important Notice -->
             <div style="margin-bottom: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px;">
@@ -1280,7 +1326,7 @@
 
             <!-- Council Rates Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Council Rates 
                     <button type="button" id="rates-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1334,19 +1380,19 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Total amount (without discounts): $</label>
                         <input type="number" id="rates_amount" name="rates_amount" step="0.01"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
                         <div>
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Rating period from:</label>
                             <input type="date" id="rates_from" name="rates_from" 
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
                         <div>
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Rating period to:</label>
                             <input type="date" id="rates_to" name="rates_to" 
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
                     </div>
 
@@ -1438,13 +1484,13 @@
                     <h4 style="color: #34495e; margin-bottom: 10px;">Supporting Documents</h4>
                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload recent rates notice or exemption letter (optional):</label>
                     <input type="file" id="rates_documents" name="rates_documents" accept=".pdf,.doc,.docx,.jpg,.png"
-                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                 </div>
             </div>
 
             <!-- Water Services Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Water Services 
                     <button type="button" id="water-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1504,26 +1550,26 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Total annual amount: $</label>
                         <input type="number" id="water_amount" name="water_amount" step="0.01"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
                         <div>
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Billing period from:</label>
                             <input type="date" id="water_from" name="water_from" 
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
                         <div>
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Billing period to:</label>
                             <input type="date" id="water_to" name="water_to" 
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
                     </div>
                     
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Water provider:</label>
                         <input type="text" id="water_provider" name="water_provider" placeholder="e.g., Urban Utilities, Council"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                 </div>
 
@@ -1546,13 +1592,13 @@
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Estimated annual cost: $</label>
                         <input type="number" id="water_estimated" name="water_estimated" step="0.01"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                     
                     <div style="margin-bottom: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Basis for estimate:</label>
                         <textarea id="water_estimate_basis" name="water_estimate_basis" rows="2" placeholder="e.g., Body corporate advises $800/year average"
-                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                  style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                     </div>
                 </div>
 
@@ -1592,14 +1638,14 @@
                     <div style="margin-top: 15px;">
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload recent water bill (optional):</label>
                         <input type="file" id="water_documents" name="water_documents" accept=".pdf,.doc,.docx,.jpg,.png"
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                     </div>
                 </div>
             </div>
 
             <!-- Other Utility Information Section -->
             <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                     Other Utility Information 
                     <button type="button" id="utilities-help-toggle" 
                             style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 13px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">
@@ -1655,12 +1701,12 @@
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Council rates: $</label>
                         <input type="text" id="summary_rates" name="summary_rates" readonly 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; background-color: #f8f9fa;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; background-color: #f8f9fa;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Water services: $</label>
                         <input type="text" id="summary_water" name="summary_water" readonly 
-                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; background-color: #f8f9fa;">
+                               style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; background-color: #f8f9fa;">
                     </div>
                 </div>
                 
@@ -1724,7 +1770,7 @@
 
         <!-- SECTION 6: Body Corporate Information -->
         <div id="section-6" class="form-section" style="display: none;">
-            <h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px;">Section 6: Body Corporate Information</h1>
+            <h1 style="color: #2c3e50; border-bottom: 3px solid #00FF00; padding-bottom: 10px; margin-bottom: 30px;">Section 6: Body Corporate Information</h1>
 
             <!-- Important Notice -->
             <div style="margin-bottom: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px;">
@@ -1743,7 +1789,7 @@
                 
                 <!-- Scheme Type Section -->
                 <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">
                         Scheme Type 
                         <button type="button" id="scheme-type-help-toggle" 
                                 style="background-color: #17a2b8; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; cursor: pointer; margin-left: 10px; transition: all 0.3s ease;">
@@ -1799,7 +1845,7 @@
 
                 <!-- Community Titles Scheme Documents -->
                 <div id="community-titles-docs" style="display: none; margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Community Titles Scheme Documents</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Community Titles Scheme Documents</h2>
                     
                     <!-- Community Management Statement -->
                     <div style="margin-bottom: 30px;">
@@ -1849,7 +1895,7 @@
                         <div id="cms-upload" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload community management statement:</label>
                             <input type="file" id="cms_document" name="cms_document" accept=".pdf,.doc,.docx"
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
                     </div>
 
@@ -1896,7 +1942,7 @@
                         <div id="bc-cert-upload" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload body corporate certificate:</label>
                             <input type="file" id="bc_cert_document" name="bc_cert_document" accept=".pdf,.doc,.docx"
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
 
                         <div id="bc-cert-no-reason" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
@@ -1937,7 +1983,7 @@
                             <div id="bc-cert-other-reason" style="display: none; margin-top: 15px;">
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Explanation:</label>
                                 <textarea id="bc_cert_other_explanation" name="bc_cert_other_explanation" rows="3"
-                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                             </div>
                         </div>
                     </div>
@@ -1945,7 +1991,7 @@
 
                 <!-- BUGTA Scheme Documents -->
                 <div id="bugta-docs" style="display: none; margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">BUGTA Scheme Documents</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">BUGTA Scheme Documents</h2>
                     
                     <!-- BUGTA Body Corporate Certificate -->
                     <div style="margin-bottom: 30px;">
@@ -1990,7 +2036,7 @@
                         <div id="bugta-cert-upload" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Upload BUGTA body corporate certificate:</label>
                             <input type="file" id="bugta_cert_document" name="bugta_cert_document" accept=".pdf,.doc,.docx"
-                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                   style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                         </div>
 
                         <div id="bugta-cert-no-reason" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border-radius: 6px; border: 1px solid #ddd;">
@@ -2031,7 +2077,7 @@
                             <div id="bugta-cert-other-reason" style="display: none; margin-top: 15px;">
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Explanation:</label>
                                 <textarea id="bugta_cert_other_explanation" name="bugta_cert_other_explanation" rows="3"
-                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                             </div>
                         </div>
                     </div>
@@ -2039,7 +2085,7 @@
 
                 <!-- Body Corporate Financial Information -->
                 <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Body Corporate Financial Information</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Body Corporate Financial Information</h2>
                     <p style="margin-bottom: 15px; color: #34495e; font-style: italic;">This helps complete the disclosure</p>
                     
                     <!-- Regular Contributions -->
@@ -2050,12 +2096,12 @@
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Monthly/quarterly body corporate fees: $</label>
                                 <input type="number" id="bc_fees" name="bc_fees" step="0.01"
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">How often:</label>
                                 <select id="bc_frequency" name="bc_frequency" 
-                                        style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                        style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                                     <option value="">Select frequency</option>
                                     <option value="monthly">Monthly</option>
                                     <option value="quarterly">Quarterly</option>
@@ -2093,12 +2139,12 @@
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Description and cost:</label>
                                 <textarea id="special_levies_description" name="special_levies_description" rows="3" 
                                           placeholder="e.g., Building exterior painting - $80,000 total cost"
-                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                          style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                             </div>
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Your share of costs: $</label>
                                 <input type="number" id="special_levies_cost" name="special_levies_cost" step="0.01"
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                         </div>
                     </div>
@@ -2129,7 +2175,7 @@
 
                 <!-- Additional Body Corporate Information -->
                 <div style="margin-bottom: 30px; padding: 20px; background: #f8f9fa; border: 1px solid #e1e8ed; border-radius: 8px;">
-                    <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px;">Additional Body Corporate Information</h2>
+                    <h2 style="color: #2c3e50; border-bottom: 2px solid #00FF00; padding-bottom: 8px; margin-bottom: 20px;">Additional Body Corporate Information</h2>
                     
                     <!-- Management Arrangements -->
                     <div style="margin-bottom: 30px;">
@@ -2139,12 +2185,12 @@
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Body corporate manager:</label>
                                 <input type="text" id="bc_manager" name="bc_manager" placeholder="Company name"
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                             <div>
                                 <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Manager contact details (optional):</label>
                                 <input type="text" id="bc_manager_contact" name="bc_manager_contact" placeholder="Phone or email"
-                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
+                                       style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">
                             </div>
                         </div>
                     </div>
@@ -2196,7 +2242,7 @@
                         <div id="bc-issues-description" style="display: none; margin-top: 15px;">
                             <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Brief description:</label>
                             <textarea id="bc_issues_details" name="bc_issues_details" rows="3"
-                                      style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                                      style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc; resize: vertical;"></textarea>
                         </div>
                     </div>
 
@@ -2419,8 +2465,7 @@
                 newSellerDiv.innerHTML = `
                     <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #2c3e50;">Additional seller name:</label>
                     <input type="text" id="additional_seller_${sellerCount}" name="additional_seller_${sellerCount}" 
-                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box;">
-                `;
+                           style="width: 100%; border: 1px solid #bdc3c7; border-radius: 4px; padding: 8px 12px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s ease; background-color: #fafbfc;">                `;
                 additionalSellers.appendChild(newSellerDiv);
             });
 
@@ -3044,7 +3089,7 @@
                 this.style.backgroundColor = '#2980b9';
             });
             document.getElementById('add-seller-btn').addEventListener('mouseleave', function() {
-                this.style.backgroundColor = '#3498db';
+                this.style.backgroundColor = '#00FF00';
             });
 
             document.getElementById('next-btn').addEventListener('mouseenter', function() {
